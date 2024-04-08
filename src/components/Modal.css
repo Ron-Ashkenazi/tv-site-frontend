@@ -1,0 +1,22 @@
+.modal-dialog {
+  border-style: none;
+  max-width: 600px;
+}
+
+.form-dialog {
+  text-align: right;
+}
+
+.dialog-close-button {
+  font-size: large;
+  background: rgb(36, 36, 36);
+  color: white;
+  border-radius: 10px;
+  border-style: none;
+  padding: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.dialog-close-button:hover {
+  background: rgb(66, 66, 66);
+}

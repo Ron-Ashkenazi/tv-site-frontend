@@ -1,0 +1,63 @@
+.profile-page-root {
+  display: flex;
+}
+
+.profile-page-side-div {
+  width: 320px;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-bottom: 15px;
+  position: sticky;
+  top: 20px;
+  height: min-content;
+}
+
+.profile-page-side-div h2 {
+  text-align: center;
+}
+
+.sidebar {
+  border-style: solid;
+}
+
+.sidebar button {
+  padding: 15px;
+  width: 100%;
+  border-style: none;
+  background: white;
+  font-size: medium;
+  transition: background-color 0.3s ease;
+}
+
+.active {
+  background: rgb(220, 220, 220) !important;
+}
+
+.sidebar button:hover {
+  background: rgb(185, 185, 185) !important;
+}
+
+.upper-div {
+  display: flex;
+}
+
+.profile-pic-container {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
+
+.profile-pic {
+  width: 290px;
+  height: 290px;
+  border-style: solid;
+  border-radius: 50%;
+  border-width: thin;
+}
+
+.upper-div-h1 {
+  width: 60%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}

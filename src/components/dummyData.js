@@ -1,0 +1,512 @@
+export const tvShowsArr = [
+  {
+    id: 1667,
+    media_type: "tv",
+    name: "Friends",
+    overview:
+      "Six young people from New York City, on their own and struggling to survive in the real world, find the companionship, comfort and support they get from each other to be the perfect antidote to the pressures of life.",
+    poster_path: "/2koX1xLkpTQM4IZebYvKysFW1Nh.jpg",
+    first_air_date: "22-09-1994",
+    my_rating: 7,
+    watchlist: false,
+  },
+  {
+    id: 1668,
+    media_type: "tv",
+    name: "Friends",
+    overview:
+      "Six young people from New York City, on their own and struggling to survive in the real world, find the companionship, comfort and support they get from each other to be the perfect antidote to the pressures of life.",
+    poster_path: "/2koX1xLkpTQM4IZebYvKysFW1Nh.jpg",
+    first_air_date: "22-09-1994",
+    my_rating: 8,
+    watchlist: false,
+  },
+  {
+    id: 1669,
+    media_type: "tv",
+    name: "Friends",
+    overview:
+      "Six young people from New York City, on their own and struggling to survive in the real world, find the companionship, comfort and support they get from each other to be the perfect antidote to the pressures of life.",
+    poster_path: "/2koX1xLkpTQM4IZebYvKysFW1Nh.jpg",
+    first_air_date: "22-09-1994",
+    my_rating: 9,
+    watchlist: false,
+  },
+  {
+    id: 1661,
+    media_type: "tv",
+    name: "Friends",
+    overview:
+      "Six young people from New York City, on their own and struggling to survive in the real world, find the companionship, comfort and support they get from each other to be the perfect antidote to the pressures of life.",
+    poster_path: "/2koX1xLkpTQM4IZebYvKysFW1Nh.jpg",
+    first_air_date: "22-09-1994",
+    my_rating: 7,
+    watchlist: false,
+  },
+  {
+    id: 1662,
+    media_type: "tv",
+    name: "Friends",
+    overview:
+      "Six young people from New York City, on their own and struggling to survive in the real world, find the companionship, comfort and support they get from each other to be the perfect antidote to the pressures of life.",
+    poster_path: "/2koX1xLkpTQM4IZebYvKysFW1Nh.jpg",
+    first_air_date: "22-09-1994",
+    my_rating: 8,
+    watchlist: false,
+  },
+  {
+    id: 1663,
+    media_type: "tv",
+    name: "Friends",
+    overview:
+      "Six young people from New York City, on their own and struggling to survive in the real world, find the companionship, comfort and support they get from each other to be the perfect antidote to the pressures of life.",
+    poster_path: "/2koX1xLkpTQM4IZebYvKysFW1Nh.jpg",
+    first_air_date: "22-09-1994",
+    my_rating: 9,
+    watchlist: false,
+  },
+  {
+    id: 161,
+    media_type: "tv",
+    name: "Friends",
+    overview:
+      "Six young people from New York City, on their own and struggling to survive in the real world, find the companionship, comfort and support they get from each other to be the perfect antidote to the pressures of life.",
+    poster_path: "/2koX1xLkpTQM4IZebYvKysFW1Nh.jpg",
+    first_air_date: "22-09-1994",
+    my_rating: 7,
+    watchlist: false,
+  },
+  {
+    id: 162,
+    media_type: "tv",
+    name: "Friends",
+    overview:
+      "Six young people from New York City, on their own and struggling to survive in the real world, find the companionship, comfort and support they get from each other to be the perfect antidote to the pressures of life.",
+    poster_path: "/2koX1xLkpTQM4IZebYvKysFW1Nh.jpg",
+    first_air_date: "22-09-1994",
+    my_rating: 8,
+    watchlist: false,
+  },
+  {
+    id: 163,
+    media_type: "tv",
+    name: "Friends",
+    overview:
+      "Six young people from New York City, on their own and struggling to survive in the real world, find the companionship, comfort and support they get from each other to be the perfect antidote to the pressures of life.",
+    poster_path: "/2koX1xLkpTQM4IZebYvKysFW1Nh.jpg",
+    first_air_date: "22-09-1994",
+    my_rating: 9,
+    watchlist: false,
+  },
+  {
+    id: 164,
+    media_type: "tv",
+    name: "Friends",
+    overview:
+      "Six young people from New York City, on their own and struggling to survive in the real world, find the companionship, comfort and support they get from each other to be the perfect antidote to the pressures of life.",
+    poster_path: "/2koX1xLkpTQM4IZebYvKysFW1Nh.jpg",
+    first_air_date: "22-09-1994",
+    my_rating: 7,
+    watchlist: false,
+  },
+  {
+    id: 165,
+    media_type: "tv",
+    name: "Friends",
+    overview:
+      "Six young people from New York City, on their own and struggling to survive in the real world, find the companionship, comfort and support they get from each other to be the perfect antidote to the pressures of life.",
+    poster_path: "/2koX1xLkpTQM4IZebYvKysFW1Nh.jpg",
+    first_air_date: "22-09-1994",
+    my_rating: 8,
+    watchlist: false,
+  },
+  {
+    id: 166,
+    media_type: "tv",
+    name: "Friends",
+    overview:
+      "Six young people from New York City, on their own and struggling to survive in the real world, find the companionship, comfort and support they get from each other to be the perfect antidote to the pressures of life.",
+    poster_path: "/2koX1xLkpTQM4IZebYvKysFW1Nh.jpg",
+    first_air_date: "22-09-1994",
+    my_rating: 9,
+    watchlist: false,
+  },
+];
+
+export const moviesArr = [
+  {
+    id: 157336,
+    media_type: "movie",
+    name: "Interstellar",
+    overview:
+      "The adventures of a group of explorers who make use of a newly discovered wormhole to surpass the limitations on human space travel and conquer the vast distances involved in an interstellar voyage.",
+    poster_path: "/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg",
+    first_air_date: "05-11-2014",
+    my_rating: 7,
+    watchlist: false,
+  },
+  {
+    id: 1668,
+    media_type: "movie",
+    name: "Interstellar",
+    overview:
+      "The adventures of a group of explorers who make use of a newly discovered wormhole to surpass the limitations on human space travel and conquer the vast distances involved in an interstellar voyage.",
+    poster_path: "/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg",
+    first_air_date: "05-11-2014",
+    my_rating: 8,
+    watchlist: false,
+  },
+  {
+    id: 1669,
+    media_type: "movie",
+    name: "Interstellar",
+    overview:
+      "The adventures of a group of explorers who make use of a newly discovered wormhole to surpass the limitations on human space travel and conquer the vast distances involved in an interstellar voyage.",
+    poster_path: "/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg",
+    first_air_date: "05-11-2014",
+    my_rating: 9,
+    watchlist: false,
+  },
+];
+
+export const watchlistArr = [
+  {
+    id: 1429,
+    media_type: "tv",
+    name: "Attack on Titan",
+    overview:
+      "Several hundred years ago, humans were nearly exterminated by Titans. Titans are typically several stories tall, seem to have no intelligence, devour human beings and, worst of all, seem to do it for the pleasure rather than as a food source. A small percentage of humanity survived by walling themselves in a city protected by extremely high walls, even taller than the biggest Titans. Flash forward to the present and the city has not seen a Titan in over 100 years. Teenage boy Eren and his foster sister Mikasa witness something horrific as the city walls are destroyed by a Colossal Titan that appears out of thin air. As the smaller Titans flood the city, the two kids watch in horror as their mother is eaten alive. Eren vows that he will murder every single Titan and take revenge for all of mankind.",
+    poster_path: "/hTP1DtLGFamjfu8WqjnuQdP1n4i.jpg",
+    first_air_date: "07-04-2013",
+    my_rating: undefined,
+    watchlist: true,
+  },
+  {
+    id: 155,
+    media_type: "movie",
+    name: "The Dark Knight",
+    overview:
+      "Batman raises the stakes in his war on crime. With the help of Lt. Jim Gordon and District Attorney Harvey Dent, Batman sets out to dismantle the remaining criminal organizations that plague the streets. The partnership proves to be effective, but they soon find themselves prey to a reign of chaos unleashed by a rising criminal mastermind known to the terrified citizens of Gotham as the Joker.",
+    poster_path: "/qJ2tW6WMUDux911r6m7haRef0WH.jpg",
+    first_air_date: "16-07-2008",
+    my_rating: undefined,
+    watchlist: true,
+  },
+];
+
+export const shortTvShowsArr = [
+  {
+    id: 1668,
+    media_type: "tv",
+    name: "Friends",
+    overview:
+      "Six young people from New York City, on their own and struggling to survive in the real world, find the companionship, comfort and support they get from each other to be the perfect antidote to the pressures of life.",
+    poster_path: "/2koX1xLkpTQM4IZebYvKysFW1Nh.jpg",
+    first_air_date: "22-09-1994",
+    my_rating: 8,
+    watchlist: false,
+  },
+];
+
+export const shortMoviesArr = [
+  {
+    id: 157336,
+    media_type: "movie",
+    name: "Interstellar",
+    overview:
+      "The adventures of a group of explorers who make use of a newly discovered wormhole to surpass the limitations on human space travel and conquer the vast distances involved in an interstellar voyage.",
+    poster_path: "/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg",
+    first_air_date: "05-11-2014",
+    my_rating: 7,
+    watchlist: false,
+  },
+];
+
+export const firendsTVShow = {
+  adult: false,
+  backdrop_path: "/l0qVZIpXtIo7km9u5Yqh0nKPOr5.jpg",
+  created_by: [
+    {
+      id: 163461,
+      credit_id: "525710bf19c295731c03280b",
+      name: "Marta Kauffman",
+      gender: 1,
+      profile_path: "/AsX4ZOoQP5oQVLiA51zdRiTNKTm.jpg",
+    },
+    {
+      id: 1216352,
+      credit_id: "525710bf19c295731c032811",
+      name: "David Crane",
+      gender: 2,
+      profile_path: "/1NYo5ZYCSqoxQ5sqXLMDm3cqvKp.jpg",
+    },
+  ],
+  episode_run_time: [],
+  first_air_date: "1994-09-22",
+  genres: [
+    {
+      id: 35,
+      name: "Comedy",
+    },
+  ],
+  homepage: "",
+  id: 1668,
+  in_production: false,
+  languages: ["en"],
+  last_air_date: "2004-05-06",
+  last_episode_to_air: {
+    id: 87632,
+    name: "The Last One",
+    overview:
+      "Ross and Phoebe chase Rachel to the airport, but end up at the wrong one. Chandler and Monica finish packing for their move to the suburbs, and Joey loses Chick Jr. and Duck Jr. in the foosball table.\n\nThe series finale finds Rachel, Monica, Phoebe, Joey, Chandler and Ross embarking on the next chapters in their lives. The six of them have been there for one another through all the ups and downs of becoming adults. Now it's their last day together, and it's one of momentous events and last-minute surprises. Even as the friends make major decisions, they share a bond that will last forever.",
+    vote_average: 9.5,
+    vote_count: 35,
+    air_date: "2004-05-06",
+    episode_number: 17,
+    episode_type: "finale",
+    production_code: "176266 / 176267",
+    runtime: 48,
+    season_number: 10,
+    show_id: 1668,
+    still_path: "/7XmwmXkJtObpt6ABPENanrJHlg9.jpg",
+  },
+  name: "Friends",
+  next_episode_to_air: null,
+  networks: [
+    {
+      id: 6,
+      logo_path: "/cm111bsDVlYaC1foL0itvEI4yLG.png",
+      name: "NBC",
+      origin_country: "US",
+    },
+  ],
+  number_of_episodes: 228,
+  number_of_seasons: 10,
+  origin_country: ["US"],
+  original_language: "en",
+  original_name: "Friends",
+  overview:
+    "Six young people from New York City, on their own and struggling to survive in the real world, find the companionship, comfort and support they get from each other to be the perfect antidote to the pressures of life.",
+  popularity: 760.852,
+  poster_path: "/2koX1xLkpTQM4IZebYvKysFW1Nh.jpg",
+  production_companies: [
+    {
+      id: 1957,
+      logo_path: "/pJJw98MtNFC9cHn3o15G7vaUnnX.png",
+      name: "Warner Bros. Television",
+      origin_country: "US",
+    },
+    {
+      id: 31810,
+      logo_path: "/3oyBCnFO3tIRmny3yzYQpF5n2cS.png",
+      name: "Bright/Kauffman/Crane Productions",
+      origin_country: "US",
+    },
+  ],
+  production_countries: [
+    {
+      iso_3166_1: "US",
+      name: "United States of America",
+    },
+  ],
+  seasons: [
+    {
+      air_date: "2001-02-14",
+      episode_count: 39,
+      id: 4583,
+      name: "Specials",
+      overview: "",
+      poster_path: "/xaEj0Vw0LOmp7kBeX2vmYPb5sTg.jpg",
+      season_number: 0,
+      vote_average: 0,
+    },
+    {
+      air_date: "1994-09-22",
+      episode_count: 24,
+      id: 4573,
+      name: "Season 1",
+      overview: "",
+      poster_path: "/odCW88Cq5hAF0ZFVOkeJmeQv1nV.jpg",
+      season_number: 1,
+      vote_average: 8,
+    },
+    {
+      air_date: "1995-09-21",
+      episode_count: 24,
+      id: 4574,
+      name: "Season 2",
+      overview: "",
+      poster_path: "/kC9VHoMh1KkoAYfsY3QlHpZRxDy.jpg",
+      season_number: 2,
+      vote_average: 8.3,
+    },
+    {
+      air_date: "1996-09-16",
+      episode_count: 25,
+      id: 4575,
+      name: "Season 3",
+      overview: "",
+      poster_path: "/n9u4pslqb6tpiLc8soldL5IbAyG.jpg",
+      season_number: 3,
+      vote_average: 8.2,
+    },
+    {
+      air_date: "1997-09-25",
+      episode_count: 23,
+      id: 4576,
+      name: "Season 4",
+      overview: "",
+      poster_path: "/3WdH3FNMXgp3Qlx21T7kwKS8Mtc.jpg",
+      season_number: 4,
+      vote_average: 8.3,
+    },
+    {
+      air_date: "1998-09-24",
+      episode_count: 23,
+      id: 4577,
+      name: "Season 5",
+      overview: "",
+      poster_path: "/aEwLXWbo6gV1TNIv9veu4rRwsPZ.jpg",
+      season_number: 5,
+      vote_average: 8.4,
+    },
+    {
+      air_date: "1999-09-23",
+      episode_count: 23,
+      id: 4578,
+      name: "Season 6",
+      overview: "",
+      poster_path: "/7EU6bV6d8j1Xbc1F8QoNkOZrpsi.jpg",
+      season_number: 6,
+      vote_average: 8.3,
+    },
+    {
+      air_date: "2000-10-12",
+      episode_count: 23,
+      id: 4579,
+      name: "Season 7",
+      overview: "",
+      poster_path: "/yvUZVChjOnqCjB9rjdEqEmpDdnQ.jpg",
+      season_number: 7,
+      vote_average: 8.2,
+    },
+    {
+      air_date: "2001-09-27",
+      episode_count: 23,
+      id: 4580,
+      name: "Season 8",
+      overview: "",
+      poster_path: "/eh6PPkrzkXsEksRJDcdtx9lZsqX.jpg",
+      season_number: 8,
+      vote_average: 8.6,
+    },
+    {
+      air_date: "2002-09-26",
+      episode_count: 23,
+      id: 4581,
+      name: "Season 9",
+      overview: "",
+      poster_path: "/1IvIdN4I5jJ0bwC3BkmDCy4pQ9j.jpg",
+      season_number: 9,
+      vote_average: 8.5,
+    },
+    {
+      air_date: "2003-09-25",
+      episode_count: 17,
+      id: 4582,
+      name: "Season 10",
+      overview: "",
+      poster_path: "/67ETB6XIqYc5vZkyAjN8XINOX5i.jpg",
+      season_number: 10,
+      vote_average: 8.7,
+    },
+  ],
+  spoken_languages: [
+    {
+      english_name: "English",
+      iso_639_1: "en",
+      name: "English",
+    },
+  ],
+  status: "Ended",
+  tagline: "I'll be there for you.",
+  type: "Scripted",
+  vote_average: 8.442,
+  vote_count: 7585,
+};
+
+export const interstellarMovie = {
+  adult: false,
+  backdrop_path: "/xJHokMbljvjADYdit5fK5VQsXEG.jpg",
+  belongs_to_collection: null,
+  budget: 165000000,
+  genres: [
+    {
+      id: 12,
+      name: "Adventure",
+    },
+    {
+      id: 18,
+      name: "Drama",
+    },
+    {
+      id: 878,
+      name: "Science Fiction",
+    },
+  ],
+  homepage: "http://www.interstellarmovie.net/",
+  id: 157336,
+  imdb_id: "tt0816692",
+  original_language: "en",
+  original_title: "Interstellar",
+  overview:
+    "The adventures of a group of explorers who make use of a newly discovered wormhole to surpass the limitations on human space travel and conquer the vast distances involved in an interstellar voyage.",
+  popularity: 170.827,
+  poster_path: "/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg",
+  production_companies: [
+    {
+      id: 923,
+      logo_path: "/8M99Dkt23MjQMTTWukq4m5XsEuo.png",
+      name: "Legendary Pictures",
+      origin_country: "US",
+    },
+    {
+      id: 9996,
+      logo_path: "/3tvBqYsBhxWeHlu62SIJ1el93O7.png",
+      name: "Syncopy",
+      origin_country: "GB",
+    },
+    {
+      id: 13769,
+      logo_path: null,
+      name: "Lynda Obst Productions",
+      origin_country: "",
+    },
+  ],
+  production_countries: [
+    {
+      iso_3166_1: "GB",
+      name: "United Kingdom",
+    },
+    {
+      iso_3166_1: "US",
+      name: "United States of America",
+    },
+  ],
+  release_date: "2014-11-05",
+  revenue: 701729206,
+  runtime: 169,
+  spoken_languages: [
+    {
+      english_name: "English",
+      iso_639_1: "en",
+      name: "English",
+    },
+  ],
+  status: "Released",
+  tagline: "Mankind was born on Earth. It was never meant to die here.",
+  title: "Interstellar",
+  video: false,
+  vote_average: 8.43,
+  vote_count: 33898,
+};

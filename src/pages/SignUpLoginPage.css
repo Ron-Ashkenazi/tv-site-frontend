@@ -1,0 +1,67 @@
+.sign-up-login-root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sign-up-login-root form {
+  display: grid;
+  width: 500px;
+  margin: 100px;
+  padding: 10px;
+  border-style: solid;
+}
+
+.sign-up-login-root h2 {
+  color: red;
+  text-align: center;
+}
+
+.sign-up-login-root form label,
+.sign-up-login-root input {
+  margin-top: 5px;
+}
+
+.sign-up-login-root input {
+  padding: 5px;
+}
+
+.error-input {
+  background: rgb(255, 178, 178);
+}
+
+.labels-input-container {
+  display: grid;
+  width: 80%;
+  align-items: center;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.sign-up-login-confirm-button {
+  margin-top: 15px;
+  width: 40%;
+  margin-left: 30%;
+  margin-right: 30%;
+  padding: 5px;
+}
+
+.info-label {
+  color: white;
+  background: grey;
+  padding-left: 6px;
+  padding-right: 6px;
+  margin-left: 5px;
+  border-radius: 45px;
+  font-size: smaller;
+  width: min-content;
+}
+
+.option-label {
+  text-align: center;
+}
+
+.option-label:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}

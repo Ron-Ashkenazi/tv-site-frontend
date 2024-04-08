@@ -1,0 +1,7 @@
+.content-container {
+  list-style-type: none;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  display: grid;
+}

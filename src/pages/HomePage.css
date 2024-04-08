@@ -1,0 +1,41 @@
+.root-home-page {
+  display: grid;
+  justify-content: center;
+}
+
+.container {
+  text-align: center;
+}
+
+.container input {
+  width: 500px;
+  height: 30px;
+  font-size: 20px;
+}
+
+.tv-logo {
+  width: 340px;
+  height: 290px;
+  margin: 25px;
+}
+
+.container button {
+  margin: 15px;
+  padding: 14px;
+  font-size: larger;
+  color: white;
+  border-radius: 20px;
+  border-style: none;
+  transition: background-color 0.3s ease;
+  background-color: rgb(65, 65, 65);
+}
+
+.container button:hover {
+  background-color: rgb(124, 124, 124);
+}
+
+.content-container-home-page {
+  display: grid;
+
+  align-items: center;
+}

@@ -1,0 +1,60 @@
+.main-header {
+  background-color: rgb(40, 40, 40);
+  height: 70px;
+  align-items: center;
+  display: flex;
+}
+
+.log-in-sign-up-container {
+  display: flex;
+  justify-content: right;
+  width: 20%;
+}
+
+.profile-button-container {
+  width: 48%;
+}
+
+.home-button-container {
+  width: 32%;
+  display: flex;
+  justify-content: left;
+}
+
+.log-in-button,
+.home-button,
+.profile-button {
+  background: none;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.log-in-button:hover,
+.home-button:hover,
+.profile-button:hover {
+  color: rgb(184, 184, 184);
+}
+
+.sign-in-button {
+  background-color: white;
+  border-radius: 25px;
+  transition: background-color 0.3s ease;
+}
+
+.sign-in-button:hover {
+  background-color: rgb(184, 184, 184);
+}
+
+.sign-in-button,
+.log-in-button,
+.home-button,
+.profile-button {
+  padding: 10px;
+  font-size: large;
+  border-style: none;
+}
+
+.sign-in-button,
+.log-in-button {
+  margin: 15px;
+}

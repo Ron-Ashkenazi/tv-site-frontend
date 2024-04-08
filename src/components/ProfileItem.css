@@ -1,0 +1,70 @@
+.li-profile-item {
+  display: grid;
+  background: rgb(235, 235, 235);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 5px 5px;
+  margin: 15px;
+  border-radius: 15px;
+  position: relative;
+}
+
+.li-profile-item:hover {
+  box-shadow: rgba(0, 0, 0, 0.55) 0px 5px 15px;
+}
+
+.item-image {
+  margin: 10px;
+  width: 200px;
+  height: 310px;
+  border-radius: 15px;
+}
+
+.my-rating-div {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.rating-span {
+  font-size: 25px;
+  font-weight: bold;
+  margin-left: 8px;
+}
+
+.star-img {
+  color: #ffd700;
+  width: 30px;
+  height: 30px;
+}
+
+.star-img:hover {
+  cursor: pointer;
+  filter: brightness(115%);
+}
+
+.remove-item-button {
+  color: white;
+  background: #b12b2b;
+  margin-left: 15px;
+  font-size: 18px;
+  padding: 4px;
+  border: 1px solid #a33a3a;
+  border-radius: 10px;
+}
+
+.remove-item-button:hover {
+  background: #da0e0e;
+}
+
+.info-item-button {
+  background: white;
+  border: 1px solid black;
+  font-size: 20px;
+  padding-right: 13px;
+  padding-left: 13px;
+  border-radius: 55px;
+  margin-left: 15px;
+}
+
+.info-item-button:hover {
+  background: rgb(204, 204, 204);
+}
