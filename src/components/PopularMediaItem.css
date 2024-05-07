@@ -1,0 +1,21 @@
+.PM-item-li {
+  max-width: 250px;
+  max-height: 400px;
+  text-align: center;
+  margin: 15px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.PM-item-img-container {
+  height: 300px;
+  width: 200px;
+}
+
+.PM-item-li img {
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  display: block;
+}

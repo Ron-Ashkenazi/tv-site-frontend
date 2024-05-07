@@ -1,14 +1,47 @@
-.rating-stars {
+.rating-stars-modal {
   display: flex;
   justify-content: center;
 }
 
-.star {
-  font-size: 24px;
+.star-modal {
+  font-size: 30px;
   margin: 0 5px;
   cursor: pointer;
 }
 
-.star.filled {
-  color: #ffd700; /* Gold color for filled stars */
+.star-modal.filled {
+  color: #ffd700;
+}
+
+.rating-editor-modal-buttons-div {
+  display: flex;
+  justify-content: center;
+}
+
+.rating-editor-modal-rate-button,
+.rating-editor-modal-remove-rate-button {
+  padding: 12px;
+  margin: 20px;
+  font-size: large;
+  font-weight: bold;
+  border-radius: 10px;
+  border-style: none;
+  transition: background-color 0.3s ease;
+}
+.rating-editor-modal-rate-button {
+  color: black;
+  background-color: #ffd700;
+}
+
+.rating-editor-modal-rate-button:hover {
+  background-color: #c5a800;
+}
+
+.rating-editor-modal-remove-rate-button {
+  color: white;
+  background-color: rgb(180, 0, 0);
+}
+
+.rating-editor-modal-remove-rate-button:hover {
+  background-color: rgb(100, 0, 0);
 }

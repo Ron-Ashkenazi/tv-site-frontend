@@ -60,7 +60,7 @@ export async function removeItemFromDB(list, id) {
   });
 }
 
-export function updateItemRating(media_type, id, newRating) {
+export async function updateItemRating(media_type, id, newRating) {
   let list = "";
 
   if (media_type === "TV Series") {

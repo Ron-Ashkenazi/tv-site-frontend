@@ -1,0 +1,25 @@
+.popular-media-container {
+  list-style-type: none;
+  display: flex;
+  max-width: 1200px;
+  overflow-x: auto; /* This enables horizontal scrolling */
+  /* white-space: nowrap; Prevents items from wrapping */
+}
+
+.popular-media-container::-webkit-scrollbar {
+  height: 12px; /* Width of the scrollbar */
+}
+
+.popular-media-container::-webkit-scrollbar-track {
+  background: #e0e0e0; /* Track color */
+  border-radius: 50px;
+}
+
+.popular-media-container::-webkit-scrollbar-thumb {
+  background: rgb(41, 48, 64); /* Thumb color */
+  border-radius: 50px;
+}
+
+.popular-media-container::-webkit-scrollbar-thumb:hover {
+  background: rgb(82, 96, 129); /* Thumb color on hover */
+}

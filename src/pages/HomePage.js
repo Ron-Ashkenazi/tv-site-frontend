@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import "./HomePage.css";
-import tvLogo from "../images/tv-logo.png";
+import tvLogo from "../images/rmdb-logo2.png";
 import Content from "../components/Content";
+import PopularMedia from "../components/PopularMedia";
 
 const HomePage = () => {
   const [searchInput, setSearchInput] = useState("");
@@ -43,7 +44,12 @@ const HomePage = () => {
     <div className="root-home-page">
       <div className="container">
         <img className="tv-logo" src={tvLogo} alt="tv"></img>
-        <h1>Welcome to Bla Bla site!</h1>
+      </div>
+      <h2>Popular movies:</h2>
+      <PopularMedia type="movie" />
+      <h2>Popular shows:</h2>
+      <PopularMedia type="tv" />
+      <div className="container">
         <h2>Search your favorite tv shows and movies:</h2>
         <form onSubmit={(event) => submitSearch(searchInput, event)}>
           <input

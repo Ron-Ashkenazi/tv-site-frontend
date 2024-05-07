@@ -3,9 +3,8 @@ import { FaRegStar, FaStar } from "react-icons/fa";
 import { GrAdd, GrClose } from "react-icons/gr";
 import "./RatingAndWatchlist.css";
 import { createNewItem, createFormatedDate } from "../util/MoreFunctions";
-import { addItemToDB, removeItemFromDB } from "../util/auth";
-import Modal from "./Modal";
-import RatingEditorModal from "./RatingEditorModal";
+import { addItemToDB, removeItemFromDB, updateItemRating } from "../util/auth";
+import ModalRating from "./ModalRating";
 
 const RatingAndWatchlist = (props) => {
   const { array, watchlist, item, auth, mediaType } = props;
@@ -52,9 +51,7 @@ const RatingAndWatchlist = (props) => {
     const title = item.name || item.title;
 
     if (rateAndWatchlist.watchlist) {
-      let contentType = type === "TV Series" ? "tvShows" : "movies";
-
-      removeItemFromDB(contentType, item.id).then(() => {
+      removeItemFromDB("watchlist", item.id).then(() => {
         setRateAndWatchlist((prevState) => ({
           ...prevState,
           watchlist: !prevState.watchlist,
@@ -83,20 +80,34 @@ const RatingAndWatchlist = (props) => {
     const type = mediaType === "tv" ? "TV Series" : "Movie";
     const title = item.name || item.title;
 
-    const newItem = createNewItem(
-      "rate",
-      rating,
-      item,
-      formattedDate,
-      type,
-      title
-    );
-    addItemToDB(auth, newItem).then(() => {
-      setRateAndWatchlist((prevState) => ({
-        ...prevState,
-        rate: { exists: true, rating },
-      }));
-    });
+    if (rateAndWatchlist.rate.exists) {
+      updateItemRating(type, item.id, rating).then(() => {
+        setRateAndWatchlist((prevState) => ({
+          ...prevState,
+          rate: { exists: true, rating },
+        }));
+      });
+    } else {
+      const newItem = createNewItem(
+        "rate",
+        rating,
+        item,
+        formattedDate,
+        type,
+        title
+      );
+      addItemToDB(auth, newItem).then(() => {
+        setRateAndWatchlist((prevState) => ({
+          ...prevState,
+          rate: { exists: true, rating },
+        }));
+      });
+    }
+  };
+
+  const handleRemoveRateButton = () => {
+    const type = mediaType === "tv" ? "tvShows" : "movies";
+    removeItemFromDB(type, item.id);
   };
 
   useEffect(() => {
@@ -113,9 +124,13 @@ const RatingAndWatchlist = (props) => {
 
   return (
     <div className="root-RAW">
-      <Modal ref={modal}>
-        <RatingEditorModal rating={rateAndWatchlist.rate} />
-      </Modal>
+      <ModalRating
+        ref={modal}
+        handleRateButton={handleRateButton}
+        handleRemoveRateButton={handleRemoveRateButton}
+        receivedRating={rateAndWatchlist.rate}
+      />
+
       <span
         onClick={openModal}
         className={`rate-span-RAW ${

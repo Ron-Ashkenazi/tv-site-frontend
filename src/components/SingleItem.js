@@ -42,13 +42,15 @@ const SingleItem = (props) => {
           <p>{item.overview}</p>
           <h3>Release date: {formattedDate}</h3>
         </div>
-        <RatingAndWatchlist
-          array={type === "TV Series" ? tvShows : movies}
-          watchlist={watchlist}
-          item={item}
-          auth={auth}
-          mediaType={item.media_type}
-        />
+        {auth.userName && (
+          <RatingAndWatchlist
+            array={type === "TV Series" ? tvShows : movies}
+            watchlist={watchlist}
+            item={item}
+            auth={auth}
+            mediaType={item.media_type}
+          />
+        )}
       </div>
     </li>
   );

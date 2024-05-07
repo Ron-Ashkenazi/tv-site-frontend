@@ -57,13 +57,15 @@ const MediaItemPage = () => {
             />
           </div>
           <div className="info-div">
-            <RatingAndWatchlist
-              array={mediaType === "tv" ? tvShows : movies}
-              watchlist={watchlist}
-              item={mediaItem}
-              auth={auth}
-              mediaType={mediaType}
-            />
+            {auth.userName && (
+              <RatingAndWatchlist
+                array={mediaType === "tv" ? tvShows : movies}
+                watchlist={watchlist}
+                item={mediaItem}
+                auth={auth}
+                mediaType={mediaType}
+              />
+            )}
             <MediaItemInfo mediaType={mediaType} mediaItem={mediaItem} />
           </div>
         </>
