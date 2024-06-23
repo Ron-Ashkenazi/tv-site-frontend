@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./HomePage.css";
-import tvLogo from "../images/rmdb-logo2.png";
+import tvLogo from "../images/rmdb-logo-transparent.png";
 import Content from "../components/Content";
 import PopularMedia from "../components/PopularMedia";
 
@@ -10,7 +10,6 @@ const HomePage = () => {
 
   const submitSearch = (search, event) => {
     event.preventDefault();
-    console.log(searchInput);
     getResults(search);
   };
 
@@ -29,7 +28,6 @@ const HomePage = () => {
     fetch(fetchString, options)
       .then((response) => response.json())
       .then((response) => {
-        console.log(response.results);
         setResults(response.results);
       })
       .catch((err) => console.error(err));
@@ -42,12 +40,12 @@ const HomePage = () => {
 
   return (
     <div className="root-home-page">
-      <div className="container">
+      <div className="container upper">
         <img className="tv-logo" src={tvLogo} alt="tv"></img>
+        <h1 className="welcome-title">Welcome to RMDB</h1>
+        <h2 className="welcome-title">Your favorite movies database</h2>
       </div>
-      <h2>Popular movies:</h2>
       <PopularMedia type="movie" />
-      <h2>Popular shows:</h2>
       <PopularMedia type="tv" />
       <div className="container">
         <h2>Search your favorite tv shows and movies:</h2>

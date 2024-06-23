@@ -1,0 +1,56 @@
+.main-profile-settings {
+  padding: 20px;
+}
+
+.main-profile-settings input {
+  margin: 10px 0px 10px 0px;
+  font-size: larger;
+}
+
+.ps-button {
+  background-color: rgb(35, 35, 35);
+  color: white;
+  font-size: large;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 15px;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.ps-button:hover {
+  background-color: rgb(90, 90, 90);
+}
+
+.ps-button:disabled {
+  background-color: rgb(160, 160, 160);
+}
+
+@media only screen and (max-width: 900px) {
+  .main-profile-settings h3,
+  .main-profile-settings input,
+  .ps-button {
+    font-size: medium;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .main-profile-settings h3,
+  .main-profile-settings input {
+    font-size: small;
+  }
+
+  .main-profile-settings h5 {
+    font-size: x-small;
+  }
+
+  .main-profile-settings h3,
+  .main-profile-settings input {
+    margin: 5px 0px 5px 0px;
+  }
+
+  .ps-button {
+    font-size: x-small;
+    padding: 7px;
+  }
+}

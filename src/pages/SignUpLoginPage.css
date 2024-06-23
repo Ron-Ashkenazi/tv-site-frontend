@@ -1,7 +1,7 @@
 .sign-up-login-root {
-  display: flex;
+  display: grid;
   justify-content: center;
-  align-items: center;
+  align-items: baseline;
 }
 
 .sign-up-login-root form {
@@ -9,12 +9,17 @@
   width: 500px;
   margin: 100px;
   padding: 10px;
-  border-style: solid;
+  border-radius: 10px;
+  background: white;
+  box-shadow: rgba(0, 0, 0, 0.55) 0px 5px 15px;
+  font-family: "Trebuchet MS", sans-serif;
+  font-size: large;
 }
 
 .sign-up-login-root h2 {
-  color: red;
+  color: rgb(0, 141, 223);
   text-align: center;
+  font-size: xx-large;
 }
 
 .sign-up-login-root form label,
@@ -24,10 +29,12 @@
 
 .sign-up-login-root input {
   padding: 5px;
+  background: rgb(238, 238, 238);
+  font-size: large;
 }
 
 .error-input {
-  background: rgb(255, 178, 178);
+  background: rgb(255, 178, 178) !important;
 }
 
 .labels-input-container {
@@ -38,12 +45,32 @@
   margin-right: 10%;
 }
 
+.eye-icon {
+  margin-left: 7px;
+  margin-bottom: -3.5px;
+  scale: 1.2;
+}
+
 .sign-up-login-confirm-button {
   margin-top: 15px;
   width: 40%;
   margin-left: 30%;
   margin-right: 30%;
   padding: 5px;
+  font-size: x-large;
+  border-radius: 35px;
+  background-color: rgb(0, 141, 223);
+  transition: background-color 0.3s ease;
+  color: white;
+  border: 0cap;
+}
+
+.sign-up-login-confirm-button:hover {
+  background-color: rgb(0, 78, 122);
+}
+
+.sign-up-login-confirm-button:disabled {
+  background-color: rgb(131, 131, 131);
 }
 
 .info-label {
@@ -64,4 +91,60 @@
 .option-label:hover {
   text-decoration: underline;
   cursor: pointer;
+}
+
+@media only screen and (max-width: 900px) {
+  .sign-up-login-root form {
+    width: 400px;
+    margin: 80px;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: medium;
+  }
+
+  .sign-up-login-root h2 {
+    font-size: x-large;
+  }
+
+  .sign-up-login-root input {
+    padding: 5px;
+    background: rgb(238, 238, 238);
+    font-size: medium;
+  }
+
+  .eye-icon {
+    scale: 1;
+  }
+
+  .sign-up-login-confirm-button {
+    font-size: large;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .sign-up-login-root form {
+    width: 240px;
+    margin-top: 30px;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: small;
+  }
+
+  .sign-up-login-root h2 {
+    font-size: large;
+  }
+
+  .sign-up-login-root input {
+    padding: 5px;
+    background: rgb(238, 238, 238);
+    font-size: x-small;
+  }
+
+  .eye-icon {
+    scale: 0.8;
+  }
+
+  .sign-up-login-confirm-button {
+    font-size: medium;
+  }
 }

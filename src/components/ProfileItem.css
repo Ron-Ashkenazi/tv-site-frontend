@@ -1,6 +1,6 @@
 .li-profile-item {
   display: grid;
-  background: rgb(235, 235, 235);
+  background: white;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 5px 5px;
   margin: 15px;
   border-radius: 15px;
@@ -14,7 +14,7 @@
 .item-image {
   margin: 10px;
   width: 200px;
-  height: 310px;
+  height: 300px;
   border-radius: 15px;
 }
 
@@ -67,4 +67,84 @@
 
 .info-item-button:hover {
   background: rgb(204, 204, 204);
+}
+
+@media only screen and (max-width: 900px) {
+  .li-profile-item {
+    margin: 10px;
+  }
+
+  .my-rating-div {
+    align-items: center;
+  }
+
+  .item-image {
+    margin: 8px;
+    width: 135px;
+    height: 202px;
+  }
+
+  .rating-span {
+    font-size: 15px;
+    margin-left: 5px;
+  }
+
+  .star-img {
+    color: #ffd700;
+    width: 20px;
+    height: 20px;
+  }
+
+  .remove-item-button {
+    margin-left: 8px;
+    font-size: 12px;
+    padding: 4px;
+    border-radius: 10px;
+  }
+
+  .info-item-button {
+    font-size: 12px;
+    padding-right: 7px;
+    padding-left: 7px;
+    border-radius: 10px;
+    margin-left: 8px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .li-profile-item {
+    margin: 5px;
+  }
+
+  .item-image {
+    margin: 6px;
+    width: 100px;
+    height: 150px;
+  }
+
+  .rating-span {
+    font-size: 10px;
+    margin-left: 4px;
+  }
+
+  .star-img {
+    color: #ffd700;
+    width: 12px;
+    height: 12px;
+  }
+
+  .remove-item-button {
+    margin-left: 5px;
+    font-size: 7px;
+    padding: 4px;
+    border-radius: 8px;
+  }
+
+  .info-item-button {
+    font-size: 8px;
+    padding-right: 5px;
+    padding-left: 5px;
+    border-radius: 10px;
+    margin-left: 8px;
+  }
 }

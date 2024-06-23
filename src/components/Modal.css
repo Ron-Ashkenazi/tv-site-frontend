@@ -21,3 +21,44 @@
 .dialog-close-button:hover {
   background: rgb(66, 66, 66);
 }
+
+@media only screen and (max-width: 900px) {
+  .dialog-close-button {
+    font-size: medium;
+  }
+
+  .modal-dialog {
+    max-width: 400px;
+  }
+  .modal-dialog h2 {
+    font-size: larger;
+  }
+  .modal-dialog h3 {
+    font-size: medium;
+  }
+
+  .modal-dialog p {
+    font-size: medium;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .dialog-close-button {
+    font-size: small;
+    padding: 8px;
+  }
+
+  .modal-dialog {
+    max-width: 280px;
+  }
+  .modal-dialog h2 {
+    font-size: medium;
+  }
+  .modal-dialog h3 {
+    font-size: small;
+  }
+
+  .modal-dialog p {
+    font-size: small;
+  }
+}

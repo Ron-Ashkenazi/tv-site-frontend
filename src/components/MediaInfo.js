@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import "./MediaInfo.css";
 
 const MediaItemInfo = (props) => {
   const { mediaType, mediaItem } = props;
@@ -22,7 +23,7 @@ const MediaItemInfo = (props) => {
   }, [mediaItem]);
 
   return (
-    <div>
+    <div className="media-info-wrapper">
       <h1>{mediaType === "tv" ? mediaItem.name : mediaItem.title}</h1>
       <h3>{genres}</h3>
       <p>{mediaItem.overview}</p>

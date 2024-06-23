@@ -3,8 +3,11 @@ import { handleInputChange, validateInputs } from "../util/FormFunctions.js";
 import { ToastContainer, toast } from "react-toastify";
 import { Flip } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import "./ProfileSettings.css";
 
 const ProfileSettings = () => {
+  const URL = process.env.REACT_APP_PROTECTED_URL;
+
   const [values, setValues] = useState({
     firstName: "",
     lastName: "",
@@ -65,7 +68,7 @@ const ProfileSettings = () => {
     const storedToken = localStorage.getItem("token");
     const storedUserID = localStorage.getItem("userID");
 
-    fetch(`http://127.0.0.1:5000/api/v1/users/${storedUserID}`, {
+    fetch(`${URL}/${storedUserID}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
@@ -99,7 +102,7 @@ const ProfileSettings = () => {
     const storedToken = localStorage.getItem("token");
     const storedUserID = localStorage.getItem("userID");
 
-    fetch(`http://127.0.0.1:5000/api/v1/users/${storedUserID}`, {
+    fetch(`${URL}/${storedUserID}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
@@ -126,7 +129,7 @@ const ProfileSettings = () => {
   };
 
   return (
-    <main>
+    <main className="main-profile-settings">
       <div>
         <h3>First name</h3>
         <input
@@ -145,7 +148,11 @@ const ProfileSettings = () => {
           value={values.lastName}
         ></input>
       </div>
-      <button onClick={handleSaveChanges} disabled={valid}>
+      <button
+        className="ps-button"
+        onClick={handleSaveChanges}
+        disabled={valid}
+      >
         Save changes
       </button>
       <div>
@@ -159,6 +166,8 @@ const ProfileSettings = () => {
       </div>
       <div>
         <h3>New password</h3>
+        <h5>At least 5 characters without spaces</h5>
+
         <input
           onChange={(event) =>
             handleInputChange(setPasswordValues, null, "newPassword", event)
@@ -180,7 +189,11 @@ const ProfileSettings = () => {
           value={passwordValues.confirmNewPassword}
         ></input>
       </div>
-      <button onClick={handleChangePassword} disabled={validPassword}>
+      <button
+        className="ps-button"
+        onClick={handleChangePassword}
+        disabled={validPassword}
+      >
         Change password
       </button>
       <ToastContainer />

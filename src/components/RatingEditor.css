@@ -26,7 +26,7 @@
 }
 
 .star.filled {
-  color: #ffd700; /* Gold color for filled stars */
+  color: #ffd700;
 }
 
 .rating-actions {
@@ -38,12 +38,47 @@
   padding: 8px;
   margin: 5px;
   cursor: pointer;
-  background-color: #007bff; /* Blue color for buttons */
+  background-color: rgb(35, 35, 35);
   color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: 12px;
+  transition: background-color 0.3s ease;
 }
 
 .rating-actions button:hover {
-  background-color: #0056b3; /* Darker blue color on hover */
+  background-color: rgb(90, 90, 90);
+}
+
+@media only screen and (max-width: 900px) {
+  .rating-stars {
+    display: block;
+  }
+
+  .star {
+    font-size: 16px;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+
+  .rating-actions button {
+    padding: 8px;
+    margin: 5px;
+    border-radius: 12px;
+    font-size: x-small;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .star {
+    font-size: 12px;
+    margin: 0 3px;
+    cursor: pointer;
+  }
+
+  .rating-actions button {
+    padding: 5px;
+    margin: 5px;
+    border-radius: 8px;
+    font-size: xx-small;
+  }
 }

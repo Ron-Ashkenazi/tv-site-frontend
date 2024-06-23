@@ -3,10 +3,12 @@ import { useState, useEffect } from "react";
 import { useContext } from "react";
 import AuthContext from "../context/AuthProvider";
 import RatingAndWatchlist from "../components/RatingAndWatchlist";
-import MediaItemInfo from "../components/MediaItemInfo";
+import MediaInfo from "../components/MediaInfo";
 import "./MediaPage.css";
+import MediaCast from "../components/MediaCast";
+import Recommen from "../components/Recommen";
 
-const MediaItemPage = () => {
+const MediaPage = () => {
   const { mediaID, mediaType } = useParams();
 
   const { auth } = useContext(AuthContext);
@@ -41,7 +43,7 @@ const MediaItemPage = () => {
 
   const backgroundStyle = {
     backgroundImage: `linear-gradient(to bottom, rgb(130,130,130), rgb(130,130,130), rgb(130,130,130)),url(${backgroundImg})`,
-  }; // linear-gradient(to bottom, rgb(130,130,130), rgb(130,130,130), rgb(130,130,130)),
+  };
 
   return (
     <div>
@@ -66,7 +68,11 @@ const MediaItemPage = () => {
                 mediaType={mediaType}
               />
             )}
-            <MediaItemInfo mediaType={mediaType} mediaItem={mediaItem} />
+            <MediaInfo mediaType={mediaType} mediaItem={mediaItem} />
+            <h3 className="cast-and-recommendations">Cast:</h3>
+            <MediaCast type={mediaType} mediaID={mediaID} />
+            <h3 className="cast-and-recommendations">Recommendations:</h3>
+            <Recommen type={mediaType} mediaID={mediaID} />
           </div>
         </>
       )}
@@ -74,4 +80,4 @@ const MediaItemPage = () => {
   );
 };
 
-export default MediaItemPage;
+export default MediaPage;

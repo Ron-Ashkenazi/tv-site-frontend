@@ -1,11 +1,10 @@
 import { useEffect, useState, useCallback } from "react";
-import PopularMediaItem from "./PopularMediaItem";
-import "./PopularMedia.css";
+import RecommenItem from "./RecommenItem";
+import "./Recommen.css";
 
-const PopularMedia = (props) => {
-  const { type } = props;
+const Recommen = (props) => {
+  const { type, mediaID } = props;
   const [results, setResults] = useState([]);
-  const [loading, setLoading] = useState(true);
 
   const getItems = useCallback(() => {
     const options = {
@@ -18,42 +17,29 @@ const PopularMedia = (props) => {
     };
 
     fetch(
-      `https://api.themoviedb.org/3/${type}/popular?language=en-US&page=1`,
+      `https://api.themoviedb.org/3/${type}/${mediaID}/recommendations`,
       options
     )
       .then((response) => response.json())
       .then((response) => {
         setResults(response.results);
-        setTimeout(() => {
-          setLoading(false);
-        }, 1800);
       })
       .catch((err) => console.error(err));
-  }, [type]);
+  }, [type, mediaID]);
 
   useEffect(() => {
     getItems();
   }, [getItems]);
 
   return (
-    <div className="popular-media-wrapper">
-      <div>
-        <h2>Popular {type === "movie" ? "movies" : "shows"}:</h2>
-      </div>
-      <div className="popular-media-container">
+    <div className="recommen-wrapper">
+      <div className="recommen-div">
         {results.map((item) => {
-          return (
-            <PopularMediaItem
-              loading={loading}
-              type={type}
-              key={item.id}
-              item={item}
-            />
-          );
+          return <RecommenItem type={type} item={item} key={item.id} />;
         })}
       </div>
     </div>
   );
 };
 
-export default PopularMedia;
+export default Recommen;

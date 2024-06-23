@@ -28,6 +28,7 @@
   border-style: none;
   transition: background-color 0.3s ease;
 }
+
 .rating-editor-modal-rate-button {
   color: black;
   background-color: #ffd700;
@@ -44,4 +45,30 @@
 
 .rating-editor-modal-remove-rate-button:hover {
   background-color: rgb(100, 0, 0);
+}
+
+@media only screen and (max-width: 900px) {
+  .star-modal {
+    font-size: 24px;
+  }
+
+  .rating-editor-modal-rate-button,
+  .rating-editor-modal-remove-rate-button {
+    padding: 10px;
+    margin: 12px;
+    font-size: medium;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .star-modal {
+    font-size: 18px;
+  }
+
+  .rating-editor-modal-rate-button,
+  .rating-editor-modal-remove-rate-button {
+    padding: 7px;
+    margin: 10px;
+    font-size: small;
+  }
 }

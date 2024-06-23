@@ -9,11 +9,15 @@ import {
   handleInputBlur,
   validateInputs,
 } from "../util/FormFunctions.js";
+import { IoMdEye } from "react-icons/io";
+import { IoIosEyeOff } from "react-icons/io";
 
 const SignUpLoginPage = () => {
+  const URL = process.env.REACT_APP_PROTECTED_URL;
   const navigate = useNavigate();
   const [disableButton, setDisableButton] = useState(true);
   const { auth, setAuth } = useContext(AuthContext);
+  const [visiblePass, setVisiblePass] = useState(false);
 
   const [values, setValues] = useState({
     userName: "",
@@ -48,7 +52,7 @@ const SignUpLoginPage = () => {
       watchlist: [],
     };
     event.preventDefault();
-    fetch("http://127.0.0.1:5000/api/v1/users/signup", {
+    fetch(`${URL}/signup`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -114,15 +118,34 @@ const SignUpLoginPage = () => {
               value={values.userName}
             ></input>
             <div style={{ marginTop: "5px" }}>
-              <label>Password:</label>
-              <label
-                title="The password must be at least 5 characters long without spaces."
-                className="info-label"
-              >
-                ?
-              </label>
+              <div>
+                <label>Password:</label>
+                <label
+                  title="The password must be at least 5 characters long without spaces."
+                  className="info-label"
+                >
+                  ?
+                </label>
+                {visiblePass && (
+                  <IoMdEye
+                    className="eye-icon"
+                    onClick={() => {
+                      setVisiblePass(false);
+                    }}
+                  />
+                )}
+                {!visiblePass && (
+                  <IoIosEyeOff
+                    className="eye-icon"
+                    onClick={() => {
+                      setVisiblePass(true);
+                    }}
+                  />
+                )}
+              </div>
             </div>
             <input
+              type={visiblePass ? "" : "password"}
               className={invalidValues.password ? "error-input" : ""}
               onChange={(event) =>
                 handleInputChange(setValues, setDidEdit, "password", event)
@@ -132,6 +155,7 @@ const SignUpLoginPage = () => {
             ></input>
             <label>Confirm password:</label>
             <input
+              type={visiblePass ? "" : "password"}
               className={invalidValues.confirmPassword ? "error-input" : ""}
               onChange={(event) =>
                 handleInputChange(

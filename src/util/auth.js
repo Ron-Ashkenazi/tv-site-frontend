@@ -1,3 +1,5 @@
+const URL = process.env.REACT_APP_PROTECTED_URL;
+
 export function setUser(user) {
   localStorage.setItem("userID", user._id);
 }
@@ -29,7 +31,7 @@ export async function addItemToDB(auth, item) {
   const storedToken = localStorage.getItem("token");
   const storedUserID = localStorage.getItem("userID");
 
-  fetch(`http://127.0.0.1:5000/api/v1/users/lists/${storedUserID}`, {
+  fetch(`${URL}/lists/${storedUserID}`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -45,12 +47,10 @@ export async function removeItemFromDB(list, id) {
     list: list,
   };
 
-  console.log(data);
-
   const storedToken = localStorage.getItem("token");
   const storedUserID = localStorage.getItem("userID");
 
-  fetch(`http://127.0.0.1:5000/api/v1/users/lists/${storedUserID}`, {
+  fetch(`${URL}/lists/${storedUserID}`, {
     method: "DELETE",
     headers: {
       "Content-Type": "application/json",
@@ -75,20 +75,15 @@ export async function updateItemRating(media_type, id, newRating) {
     rating: newRating,
   };
 
-  console.log(data);
-
   const storedToken = localStorage.getItem("token");
   const storedUserID = localStorage.getItem("userID");
 
-  fetch(
-    `http://127.0.0.1:5000/api/v1/users/lists/updateItemRating/${storedUserID}`,
-    {
-      method: "PATCH",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${storedToken}`,
-      },
-      body: JSON.stringify(data),
-    }
-  );
+  fetch(`${URL}/lists/updateItemRating/${storedUserID}`, {
+    method: "PATCH",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${storedToken}`,
+    },
+    body: JSON.stringify(data),
+  });
 }

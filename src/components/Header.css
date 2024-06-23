@@ -1,24 +1,32 @@
 .main-header {
-  background-color: rgb(41, 48, 64);
+  background-color: rgb(35, 35, 35);
   height: 70px;
-  align-items: center;
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
 }
 
+.profile-button-container,
+.home-button-container,
 .log-in-sign-up-container {
   display: flex;
-  justify-content: right;
-  width: 20%;
+  align-items: center;
 }
 
 .profile-button-container {
-  width: 48%;
+  flex: 1;
+  justify-content: flex-start;
 }
 
 .home-button-container {
-  width: 32%;
-  display: flex;
-  justify-content: left;
+  flex: 1;
+  justify-content: center;
+}
+
+.log-in-sign-up-container {
+  flex: 1;
+  justify-content: flex-end;
 }
 
 .log-in-button,
@@ -27,6 +35,10 @@
   background: none;
   color: white;
   transition: color 0.3s ease;
+}
+
+.home-button {
+  font-size: 34px !important;
 }
 
 .log-in-button:hover,
@@ -57,4 +69,43 @@
 .sign-in-button,
 .log-in-button {
   margin: 15px;
+}
+
+@media only screen and (max-width: 900px) {
+  .main-header {
+    height: 50px;
+  }
+
+  .home-button {
+    font-size: 24px !important;
+  }
+
+  .sign-in-button,
+  .log-in-button,
+  .profile-button {
+    font-size: small;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .main-header {
+    height: 35px;
+  }
+
+  .home-button {
+    font-size: 18px !important;
+    margin-top: -4px;
+  }
+
+  .sign-in-button,
+  .log-in-button,
+  .profile-button,
+  .home-button {
+    font-size: xx-small;
+    padding: 6px;
+  }
+  .sign-in-button,
+  .log-in-button {
+    margin: 10px;
+  }
 }

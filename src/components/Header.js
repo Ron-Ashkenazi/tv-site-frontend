@@ -1,8 +1,9 @@
 import "./Header.css";
 import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
-import AuthContext from "../context/AuthProvider";
 import { removeUser } from "../util/auth";
+import AuthContext from "../context/AuthProvider";
+import "@fontsource/antonio";
 
 const Header = () => {
   const { auth, setAuth } = useContext(AuthContext);
@@ -11,6 +12,10 @@ const Header = () => {
     localStorage.removeItem("token");
     removeUser();
     setAuth({});
+  };
+
+  const buttonStyle = {
+    fontFamily: "Antonio, sans-serif",
   };
 
   const navigate = useNavigate();
@@ -27,8 +32,12 @@ const Header = () => {
         )}
       </div>
       <div className="home-button-container">
-        <button onClick={() => navigate("")} className="home-button">
-          Home
+        <button
+          onClick={() => navigate("")}
+          className="home-button"
+          style={buttonStyle}
+        >
+          RMDB
         </button>
       </div>
       {auth.userName ? (

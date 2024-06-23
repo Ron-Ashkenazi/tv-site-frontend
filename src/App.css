@@ -1,1 +1,18 @@
+.gap-div {
+  height: 30px;
+}
 
+.auth-page .gap-div {
+  height: 0px;
+}
+
+.auth-page {
+  background: linear-gradient(210deg, rgb(170, 170, 170), #405c72);
+}
+
+.app-root {
+  background-color: #f0f0f0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  overflow: auto;
+}

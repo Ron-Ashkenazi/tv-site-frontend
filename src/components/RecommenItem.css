@@ -1,0 +1,39 @@
+.RI-item-li {
+  text-align: center;
+  padding: 15px;
+}
+
+.RI-item-li img {
+  border-radius: 10px;
+  width: 350px;
+  height: auto;
+  display: block;
+}
+
+.RI-item-title strong {
+  font-size: large;
+}
+
+.RI-item-title {
+  padding: 10px;
+}
+
+@media only screen and (max-width: 900px) {
+  .RI-item-li img {
+    width: 250px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .RI-item-li img {
+    width: 170px;
+  }
+
+  .RI-item-title strong {
+    font-size: x-small;
+  }
+
+  .RI-item-title {
+    padding: 5px;
+  }
+}

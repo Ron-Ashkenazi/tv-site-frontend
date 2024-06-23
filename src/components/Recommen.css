@@ -1,0 +1,43 @@
+.recommen-div {
+  list-style-type: none;
+  display: flex;
+  max-width: 1200px;
+  overflow-y: hidden;
+  overflow-x: auto;
+}
+
+.recommen-div::-webkit-scrollbar {
+  height: 12px;
+}
+
+.recommen-div::-webkit-scrollbar-track {
+  background: #e0e0e0;
+  border-radius: 50px;
+}
+
+.recommen-div::-webkit-scrollbar-thumb {
+  background: rgb(41, 48, 64);
+  border-radius: 50px;
+}
+
+.recommen-div::-webkit-scrollbar-thumb:hover {
+  background: rgb(82, 96, 129);
+}
+
+@media only screen and (max-width: 1250px) {
+  .recommen-wrapper {
+    padding: 15px !important;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .recommen-div::-webkit-scrollbar {
+    height: 8px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .recommen-div::-webkit-scrollbar {
+    height: 5px;
+  }
+}

@@ -1,5 +1,4 @@
 import "./ProfilePage.css";
-import squidPic from "../images/handsome_squid.jpg";
 import ProfileContent from "../components/ProfileContent";
 import AuthContext from "../context/AuthProvider";
 import { useState, useContext } from "react";
@@ -26,10 +25,7 @@ const ProfilePage = () => {
   return (
     <div className="profile-page-root">
       <div className="profile-page-side-div">
-        <div className="profile-page-picture-name">
-          <div className="profile-pic-container">
-            <img alt="profile" className="profile-pic" src={squidPic} />
-          </div>
+        <div className="profile-page-name">
           <h2>
             {firstName} {lastName}
           </h2>
@@ -74,10 +70,12 @@ const ProfilePage = () => {
         </aside>
       </div>
       <main className="profile-main">
-        <div className="profile-content">
-          {!dataContent && <div>Choose one of the options to the left.</div>}
-          {dataContent && <ProfileContent contentType={dataContent} />}
-        </div>
+        {!dataContent && (
+          <div style={{ paddingLeft: "20px" }}>
+            <h4>Choose one of the options</h4>
+          </div>
+        )}
+        {dataContent && <ProfileContent contentType={dataContent} />}
       </main>
     </div>
   );

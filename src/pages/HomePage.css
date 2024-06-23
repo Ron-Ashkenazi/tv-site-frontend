@@ -1,10 +1,20 @@
 .root-home-page {
   display: grid;
-  justify-content: center;
 }
 
 .container {
   text-align: center;
+}
+
+.upper {
+  background: linear-gradient(45deg, #293040, #405c72);
+  min-height: 350px;
+}
+
+.welcome-title {
+  color: white;
+  font-family: cursive;
+  margin-top: -10px;
 }
 
 .container input {
@@ -14,9 +24,9 @@
 }
 
 .tv-logo {
-  width: 340px;
-  height: 290px;
-  margin: 25px;
+  width: 530px;
+  height: auto;
+  padding: 45px;
 }
 
 .container button {
@@ -27,15 +37,66 @@
   border-radius: 20px;
   border-style: none;
   transition: background-color 0.3s ease;
-  background-color: rgb(65, 65, 65);
+  background-color: #293040;
 }
 
 .container button:hover {
-  background-color: rgb(124, 124, 124);
+  background-color: #405c72;
 }
 
 .content-container-home-page {
   display: grid;
 
   align-items: center;
+}
+
+@media only screen and (max-width: 1250px) {
+  .container {
+    padding: 15px !important;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .tv-logo {
+    width: 300px;
+  }
+
+  .welcome-title {
+    font-size: medium;
+  }
+
+  .upper {
+    min-height: 150px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .root-home-page {
+    justify-content: center;
+  }
+
+  .tv-logo {
+    width: 250px;
+    padding: 25px;
+  }
+
+  .upper {
+    min-height: 100px;
+  }
+
+  .container button {
+    margin: 10px;
+    padding: 10px;
+    font-size: small;
+  }
+
+  .container h2 {
+    font-size: small;
+  }
+
+  .container input {
+    width: 300px;
+    height: 20px;
+    font-size: 10px;
+  }
 }

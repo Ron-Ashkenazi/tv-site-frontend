@@ -9,11 +9,15 @@ import {
   handleInputBlur,
   validateInputs,
 } from "../util/FormFunctions.js";
+import { IoMdEye } from "react-icons/io";
+import { IoIosEyeOff } from "react-icons/io";
 
 const Login = () => {
+  const URL = process.env.REACT_APP_PROTECTED_URL;
   const navigate = useNavigate();
   const { auth, setAuth } = useContext(AuthContext);
   const [disableButton, setDisableButton] = useState(true);
+  const [visiblePass, setVisiblePass] = useState(false);
 
   const [values, setValues] = useState({
     userName: "",
@@ -36,7 +40,7 @@ const Login = () => {
       userName: values.userName,
     };
     event.preventDefault();
-    fetch("http://127.0.0.1:5000/api/v1/users/login", {
+    fetch(`${URL}/login`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -75,8 +79,27 @@ const Login = () => {
               onBlur={() => handleInputBlur(setDidEdit, "userName")}
               value={values.userName}
             ></input>
-            <label>Password:</label>
+            <div style={{ marginTop: "5px" }}>
+              <label>Password:</label>
+              {visiblePass && (
+                <IoMdEye
+                  className="eye-icon"
+                  onClick={() => {
+                    setVisiblePass(false);
+                  }}
+                />
+              )}
+              {!visiblePass && (
+                <IoIosEyeOff
+                  className="eye-icon"
+                  onClick={() => {
+                    setVisiblePass(true);
+                  }}
+                />
+              )}
+            </div>
             <input
+              type={visiblePass ? "" : "password"}
               className={invalidValues.password ? "error-input" : ""}
               onChange={(event) =>
                 handleInputChange(setValues, setDidEdit, "password", event)

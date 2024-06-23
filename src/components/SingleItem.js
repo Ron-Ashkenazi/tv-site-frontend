@@ -10,7 +10,7 @@ const SingleItem = (props) => {
   const title = item.media_type === "tv" ? item.name : item.title;
   const type = item.media_type === "tv" ? "TV Series" : "Movie";
 
-  function shortenTitle(str, maxLength) {
+  function shorten(str, maxLength) {
     if (str?.length > maxLength) {
       return str.substring(0, maxLength) + "...";
     } else {
@@ -18,7 +18,9 @@ const SingleItem = (props) => {
     }
   }
 
-  const shortTitle = shortenTitle(title, 45);
+  const shortTitle = shorten(title, 45);
+
+  const shortOverview = shorten(item.overview, 520);
 
   const formattedDate = createFormatedDate(item);
 
@@ -33,24 +35,26 @@ const SingleItem = (props) => {
         </Link>
       </div>
       <div className="item-li-con">
-        <div className="item-li-titles">
-          <h1 className="item-title">{shortTitle}</h1>
-          <h1 className="item-type">({type})</h1>
+        <div className="item-li-con-inner">
+          <div className="item-li-titles">
+            <h1 className="item-title">{shortTitle}</h1>
+            <h1 className="item-type">({type})</h1>
+          </div>
+          <div className="item-li-overview">
+            <h2 className="overview-h2">Overview:</h2>
+            <p>{shortOverview}</p>
+            <h3>Release date: {formattedDate}</h3>
+          </div>
+          {auth.userName && (
+            <RatingAndWatchlist
+              array={type === "TV Series" ? tvShows : movies}
+              watchlist={watchlist}
+              item={item}
+              auth={auth}
+              mediaType={item.media_type}
+            />
+          )}
         </div>
-        <div className="item-li-overview">
-          <h2 className="overview-h2">Overview:</h2>
-          <p>{item.overview}</p>
-          <h3>Release date: {formattedDate}</h3>
-        </div>
-        {auth.userName && (
-          <RatingAndWatchlist
-            array={type === "TV Series" ? tvShows : movies}
-            watchlist={watchlist}
-            item={item}
-            auth={auth}
-            mediaType={item.media_type}
-          />
-        )}
       </div>
     </li>
   );

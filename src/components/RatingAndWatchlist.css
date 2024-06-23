@@ -46,3 +46,33 @@
 .in-watchlist:hover {
   background-color: rgb(100, 0, 0);
 }
+
+@media only screen and (max-width: 1250px) {
+  .root-RAW {
+    font-size: large;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .root-RAW {
+    font-size: medium;
+  }
+
+  .rate-span-RAW,
+  .watchlist-span-RAW {
+    padding: 10px;
+    margin: 6px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .root-RAW {
+    font-size: small;
+  }
+
+  .rate-span-RAW,
+  .watchlist-span-RAW {
+    padding: 8px;
+    margin: 6px;
+  }
+}
