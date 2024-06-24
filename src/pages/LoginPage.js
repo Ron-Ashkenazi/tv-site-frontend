@@ -54,6 +54,9 @@ const Login = () => {
         localStorage.setItem("token", res.token);
         setUser(res.user);
         setAuth(res.user);
+        setTimeout(() => {
+          navigate("/");
+        }, 1500);
       })
       .catch((error) => {
         console.log(error);
@@ -64,7 +67,7 @@ const Login = () => {
     <div className="sign-up-login-root">
       {auth.userName ? (
         <>
-          <h2>Welcome back {auth.userName}</h2>
+          <h2 style={{ color: "white" }}>Welcome back {auth.userName}</h2>
         </>
       ) : (
         <form onSubmit={handleSubmit}>

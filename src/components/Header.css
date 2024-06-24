@@ -30,11 +30,17 @@
 }
 
 .log-in-button,
-.home-button,
-.profile-button {
+.home-button {
   background: none;
   color: white;
   transition: color 0.3s ease;
+}
+
+.profile-button {
+  background: white;
+  color: rgb(35, 35, 35);
+  transition: color 0.3s ease;
+  border-radius: 50%;
 }
 
 .home-button {
@@ -42,9 +48,13 @@
 }
 
 .log-in-button:hover,
-.home-button:hover,
-.profile-button:hover {
+.home-button:hover {
   color: rgb(184, 184, 184);
+}
+
+.profile-button:hover {
+  background-color: rgb(184, 184, 184);
+  transition: background-color 0.3s ease;
 }
 
 .sign-in-button {
@@ -59,16 +69,26 @@
 
 .sign-in-button,
 .log-in-button,
-.home-button,
-.profile-button {
+.home-button {
   padding: 10px;
   font-size: large;
   border-style: none;
 }
 
+.profile-button {
+  padding: 10px;
+  font-size: 30px;
+}
+
 .sign-in-button,
 .log-in-button {
   margin: 15px;
+}
+
+.log-in-sign-up-container p,
+.clip-loader {
+  color: white;
+  margin-left: 15px;
 }
 
 @media only screen and (max-width: 900px) {
@@ -81,9 +101,21 @@
   }
 
   .sign-in-button,
-  .log-in-button,
-  .profile-button {
+  .log-in-button {
     font-size: small;
+  }
+
+  .profile-button {
+    padding: 8px;
+    font-size: 22px;
+  }
+
+  .log-in-sign-up-container p {
+    font-size: small;
+  }
+
+  .clip-loader {
+    scale: 0.7;
   }
 }
 
@@ -99,13 +131,31 @@
 
   .sign-in-button,
   .log-in-button,
-  .profile-button,
   .home-button {
     font-size: xx-small;
     padding: 6px;
   }
+
+  .profile-button {
+    padding: 6px;
+    font-size: 14px;
+  }
+
   .sign-in-button,
   .log-in-button {
-    margin: 10px;
+    margin: 8px;
+  }
+
+  .log-in-sign-up-container p,
+  .clip-loader {
+    margin-left: 0;
+  }
+
+  .log-in-sign-up-container p {
+    font-size: xx-small;
+  }
+
+  .clip-loader {
+    scale: 0.4;
   }
 }

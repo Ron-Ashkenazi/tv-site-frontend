@@ -1,4 +1,4 @@
-import React, { useEffect, useContext } from "react";
+import React, { useEffect, useContext, useState } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Header from "./components/Header";
@@ -16,6 +16,7 @@ function App() {
   const URL = process.env.REACT_APP_PROTECTED_URL;
 
   const { setAuth, setLoading } = useContext(AuthContext);
+  const [dbConnection, setDbConnection] = useState(false);
 
   useEffect(() => {
     const makePingRequest = async () => {
@@ -23,6 +24,7 @@ function App() {
         const response = await fetch(`${URL}/ping`);
         const data = await response.json();
         console.log(data);
+        setDbConnection(true);
       } catch (error) {
         console.error(error);
       }
@@ -66,7 +68,7 @@ function App() {
   return (
     <Router>
       <Layout>
-        <Header />
+        <Header dbConnection={dbConnection} />
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route

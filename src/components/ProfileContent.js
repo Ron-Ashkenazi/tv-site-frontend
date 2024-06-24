@@ -163,17 +163,19 @@ const ProfileContent = (props) => {
               <h4 className="empty-list">Your list is empty</h4>
             )}
           </div>
-          <div className="pagination-buttons">
-            <button onClick={handlePreviousPage} disabled={currentPage === 1}>
-              Back
-            </button>
-            <button
-              onClick={handleNextPage}
-              disabled={currentPage === totalPages}
-            >
-              Forward
-            </button>
-          </div>
+          {totalPages > 1 && (
+            <div className="pagination-buttons">
+              <button onClick={handlePreviousPage} disabled={currentPage === 1}>
+                Back
+              </button>
+              <button
+                onClick={handleNextPage}
+                disabled={currentPage === totalPages}
+              >
+                Forward
+              </button>
+            </div>
+          )}
         </div>
       )}
     </main>

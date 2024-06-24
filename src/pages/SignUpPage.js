@@ -66,6 +66,9 @@ const SignUpLoginPage = () => {
         localStorage.setItem("token", res.token); // Set token to localStorage
         setUser(res.data.user);
         setAuth(res.data.user);
+        setTimeout(() => {
+          navigate("/");
+        }, 1500);
       })
       .catch((error) => {
         console.log(error);

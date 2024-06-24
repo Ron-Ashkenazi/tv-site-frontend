@@ -7,8 +7,8 @@ const ProfilePage = () => {
   const { auth } = useContext(AuthContext);
   const { firstName, lastName } = auth;
 
-  const [dataContent, setDataContent] = useState();
-  const [activeButton, setActiveButton] = useState();
+  const [dataContent, setDataContent] = useState("movies");
+  const [activeButton, setActiveButton] = useState("My movies");
 
   const changeDataContentHandler = (dataType) => {
     if (dataType === "tvShows") {
@@ -56,7 +56,7 @@ const ProfilePage = () => {
               setActiveButton("Watch list");
             }}
           >
-            Watch list
+            Watchlist
           </button>
           <button
             className={activeButton === "Settings" ? "active" : ""}
@@ -70,11 +70,6 @@ const ProfilePage = () => {
         </aside>
       </div>
       <main className="profile-main">
-        {!dataContent && (
-          <div style={{ paddingLeft: "20px" }}>
-            <h4>Choose one of the options</h4>
-          </div>
-        )}
         {dataContent && <ProfileContent contentType={dataContent} />}
       </main>
     </div>
